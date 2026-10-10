@@ -7,43 +7,50 @@
     <link rel="stylesheet" href="style.css"> <!-- this just connects your external CSS file to the HTML file so the browser knows how to style the elements-->
 </head>
 <body> <!--this is the body section is is all of the vsuual content-->
-
     <div class="container">
         <h2>Password Generator</h2>
-
-        <div class ="result-container">
-            <span id="result">Click generate</span>
+        <div class="wrapper">
+            <div class="input-box">
+                <input type="text" value="Lorem" diabled>
+                <span class="material-symbols-rounded">copy_all</span>
+            </div>
+            <div class="pass-indicator"></div>
+            <div class="pass-length">
+                <div class="details">
+                    <label class="title">Password Length</label>
+                    <span>15</span>
+                </div>
+                <input type="range" min="1" max="25" step="1">
+            </div>
+            <div class="pass-settings">
+                <label class="title">Password Settings</label>
+                <ul class="options"></ul>
+                <li class="option">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Lowercase (a-z)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Uppercase (A-Z)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Numbers (0-9)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Symbols (!@#$%^&*)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="exc-duplicate">
+                    <label for="exc-duplicate">Exclude Duplicate</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="spaces">
+                    <label for="spaces">Include Spaces</label>
+                </li>
+                </ul>
+            </div>
+            <button class="generate-btn">Generate passsword</button>
         </div>
-
-        <div class = "setting">
-            <label for="lengt">Password Length</label>
-            <input type="number" id="length" min = "1" max = "50" value ="12">
-        </div>
-
-        <div class="setting">
-            <label for="lowercase">Include Lowercase</label>
-            <input type="checkbox" id="lowercase" checked>
-        </div>
-
-        <div class="setting">
-            <label for="uppercase">Include Uppercase</label>
-            <input type ="checkbox" id="uppercase" checked>
-        </div>
-
-        <div class="setting">
-            <label for="numbers">Include Numbers</label>
-            <input type="checkbox" id="numbers" checked>
-        </div>
-
-        <div class="setting">
-            <label for="symbols">Include Symbols</label>
-            <input type="checkbox" id="symbols" checked>
-        </div>
-
-        <button class="btn" id="generate">Generate Password</button>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
